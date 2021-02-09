@@ -66,13 +66,17 @@ def get_players_codes() -> dict:
 
     for filepath in glob.glob(MATCHING_FILES):
         player_name = get_player_name(filepath)
-
-        # if a file has already been included, it's probably not a separate player
-        if os.path.basename(filepath) not in included_filenames:
-            response[player_name], included = read_code(filepath)
-            included_filenames += included
-
+        response[player_name], included = read_code(filepath)
+        included_filenames += included
         sent_codes_mtime[player_name] = os.stat(filepath).st_mtime
+
+    # remove files that have been included several times
+    # becaue they are probably not separate players
+    for filename in included_filenames:
+        player_name = get_player_name(filename)
+        if player_name in response:
+            del response[player_name]
+
     return response
 
 
