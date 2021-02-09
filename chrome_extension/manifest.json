@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "corewars8086_js extension",
+  "version": "1.0",
+  "description": "Sync corewars8086_js with your local files.", 
+  
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://shooshx.github.io/corewars8086_js/war/page.html"],
+      "js": ["js/content.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+
+  "permissions": ["tabs", "storage"],
+  "web_accessible_resources": ["js/injected.js"]
+}

@@ -1,0 +1,1 @@
+%define PUSHAX_STOSW_OPCODE 0xAB50

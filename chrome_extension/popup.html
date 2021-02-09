@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Popup</title>
+</head>
+
+<body>
+
+  <div id="wrong_page_div" style="display: none;" class="container">
+    <h3>
+      This extension only works at:
+      <a href="https://shooshx.github.io/corewars8086_js/war/page.html" target="_blank">corewars8086_js</a>
+    </h3>
+  </div>
+
+
+  <div id="container_div" style="display: none;">
+    <table>
+      <td colspan="2">
+        <button type="button" class="btn btn-primary load-buttons" id=load_last_codes_button>Load last debug
+          codes</button>
+      </td>
+      </tr>
+      <tr>
+        <td>
+          <h4>Auto sync:</h4>
+        </td>
+        <td>
+          <!-- Rounded switch -->
+          <label class="switch">
+            <input type="checkbox" id="auto_sync_switch">
+            <span class="slider round"></span>
+          </label>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <h5>with <a href="#">this</a> local server</h5>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <div class="alert alert-danger" role="alert" id="error_div">
+            Local server isn't running.
+          </div>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script> -->
+  <script src="js/popup.js"></script>
+</body>
+
+</html>
