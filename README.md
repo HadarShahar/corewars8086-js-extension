@@ -4,7 +4,15 @@ A chrome extension that synchronizes [corewars8086_js](https://github.com/shoosh
 
 ## Setup
 
-1. [Install the unpacked chrome extension](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/)
-2. Install the requirements for the local sever (pip install -r requirements.txt)
-3. Run: "python sync_server.py path_to_asm_files"
-   (you can omit path_to_asm_files if you want to synchronize the current directory)
+### Extension setup:
+
+1. Open the [Extension Management page](chrome://extensions).
+2. Enable Developer Mode by clicking the toggle switch next to Developer mode.
+3. Click the LOAD UNPACKED button and select the extension directory.
+
+### Local server setup:
+
+1. Install the requirements for the local sever (pip install -r requirements.txt).
+2. Run: "python sync_server.py path_to_asm_files"
+
+   (you can omit path_to_asm_files if you want to synchronize corewars8086_js with the current directory).
