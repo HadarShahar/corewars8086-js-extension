@@ -21,6 +21,6 @@
     "persistent": false
   },
 
-  "permissions": ["tabs", "storage"],
+  "permissions": ["tabs", "storage", "unlimitedStorage"],
   "web_accessible_resources": ["js/injected.js"]
 }

@@ -26,16 +26,16 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
 
 document.addEventListener("fetch_data_error", (e) => {
   console.log("fetch_data_error");
-  chrome.storage.sync.set({ auto_sync: false, server_is_running: false });
+  chrome.storage.local.set({ auto_sync: false, server_is_running: false });
 });
 
 document.addEventListener("save_current_codes", (e) => {
   console.log("saving current codes:", e.detail);
-  chrome.storage.sync.set({ last_codes: e.detail });
+  chrome.storage.local.set({ last_codes: e.detail });
 });
 
 function checkAutoSync() {
-  chrome.storage.sync.get(["auto_sync"], (result) => {
+  chrome.storage.local.get(["auto_sync"], (result) => {
     dispatchToggleSyncEvent(result.auto_sync);
   });
 }
